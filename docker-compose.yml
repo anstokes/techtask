@@ -1,0 +1,24 @@
+version: "3"
+name: "techtest"
+services:
+  server:
+    build:
+      context: ./server
+    container_name: "techtest_server"
+    image: techtest/server
+    networks:
+      - internal
+    ports:
+      - "3000:3000"
+  client:
+    build:
+      context: ./client
+    container_name: "techtest_client"
+    image: techtest/client
+    networks:
+      - internal
+    ports:
+      - "3001:3001"
+networks:
+  internal:
+    driver: bridge

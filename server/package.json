@@ -1,0 +1,40 @@
+{
+  "name": "techtask_server",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "npx tsc -p ./tsconfig.build.json",
+    "lint": "eslint .",
+    "start:dev": "cross-env NODE_ENV=dev NODE_PATH=./src/ nodemon --watch ./src ./src/http.ts",
+    "start": "node ./dist/http.js",
+    "test:all": "cross-env-shell NODE_PATH=./src/ && ts-mocha './test/**/*.ts'"
+  },
+  "dependencies": {
+    "awilix": "^8.0.1",
+    "awilix-express": "^8.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "~4.16.1",
+    "express-prometheus-middleware": "^1.2.0",
+    "prom-client": "13"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.6.2",
+    "@typescript-eslint/eslint-plugin": "6.0.0",
+    "@typescript-eslint/parser": "6.0.0",
+    "chai": "^4.3.8",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.49.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-plugin-import": "^2.28.1",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3",
+    "ts-mocha": "^10.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}

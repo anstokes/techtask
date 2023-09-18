@@ -1,0 +1,48 @@
+.App {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+
+.App .left {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  width: 50%;
+  background-color: blue;
+  color: white;
+  font-size: x-large;
+  position: relative;
+}
+
+.App .left .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #000099;
+}
+
+.App .right {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  width: 50%;
+  color: white;
+  background-color: red;
+  font-size: small;
+  position: relative;
+}
+
+.App .right .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #990000;
+}
+
+.App .pleaseWait {
+  font-size: x-large;  
+}
